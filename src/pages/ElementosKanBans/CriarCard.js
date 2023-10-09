@@ -41,7 +41,7 @@ function CriarCard({ fecharPainel, BD, Ids }) {
   const [filiais, setFiliais] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/cargos", {
+    fetch("https://json-server-77b6.onrender.com/cargos", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -55,7 +55,7 @@ function CriarCard({ fecharPainel, BD, Ids }) {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/filiais", {
+    fetch("https://json-server-77b6.onrender.com/filiais", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -110,7 +110,7 @@ function CriarCard({ fecharPainel, BD, Ids }) {
     NewCard.fase = 1;
     NewCard.id = Ids;
 
-    fetch(`http://localhost:5000${BD}`, {
+    fetch(`https://json-server-77b6.onrender.com${BD}`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",

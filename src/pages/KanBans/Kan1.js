@@ -12,7 +12,7 @@ function Kan1({tipoKanBan, DataKanBan, BD, BDsaude, BDTI}) {
 
     useEffect(
         () => {
-        fetch(`http://localhost:5000${BD}`, {
+        fetch(`https://json-server-77b6.onrender.com${BD}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -47,17 +47,7 @@ function Kan1({tipoKanBan, DataKanBan, BD, BDsaude, BDTI}) {
         else {
             var IDs = (KanB[KanB.length - 1].id) + 1
             setCC([<CriarCard fecharPainel={closeCardCreation} BD={BD} Ids={IDs}/>])
-        }        
-
-        // var ProjetosTemp = [];
-
-        // for (let i = 0; i < Projetos.length; i++) {
-        //     ProjetosTemp.push(Projetos[i])
-        // }
-
-        // ProjetosTemp.push(<Link className={s.lin} to='/kan1'><KanBanAdmissoes dataAdmissao="42/42/4202"/></Link>)
-
-        // setProjetos(ProjetosTemp)
+        }       
     }
 
     function closeCardCreation() {
