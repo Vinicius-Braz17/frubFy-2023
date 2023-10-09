@@ -266,7 +266,9 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
           .then(alert("Card movido com sucesso"))
           .catch((err) => console.log(err));
 
-          if(cardAtualizado.fase === 3) {console.log("oiii"); cardParaSaude(c)}
+          console.log("qual a fase: " + cardAtualizado.fase);
+
+          if(cardAtualizado.fase === 3) { cardParaSaude(c)}
           else if (cardAtualizado.fase > 3) {
             var CS = {
               nome: cardAtualizado.nome,
