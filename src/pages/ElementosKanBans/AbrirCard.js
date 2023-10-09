@@ -266,7 +266,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
           .then(alert("Card movido com sucesso"))
           .catch((err) => console.log(err));
 
-          if(cardAtualizado.fase === 3) {cardParaSaude(c)}
+          if(cardAtualizado.fase === 3) {console.log("oiii"); cardParaSaude(c)}
           else if (cardAtualizado.fase > 3) {
             var CS = {
               nome: cardAtualizado.nome,
@@ -353,7 +353,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
             defaultValue={colaborador.nome}
             onKeyUp={ToUpperCase}
             type="text"
-            placeholder="Digite o nome do candidato" /*onChange={HandleChange}*/
+            placeholder="Digite o nome do candidato"
           />
         </div>
 
