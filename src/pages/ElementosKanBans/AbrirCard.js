@@ -142,7 +142,6 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
         body: JSON.stringify(cardAtualizado),
       })
         .then((resp) => resp.json())
-        .then(alert("Card atualizado com sucesso!! \nDeclinio contabilizado"))
         .catch((err) => console.log(err));
 
         var CardDeclinioS = cardAtualizado;
@@ -166,7 +165,6 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
         body: JSON.stringify(cardAtualizado),
       })
         .then((resp) => resp.json())
-        .then(alert("Card atualizado com sucesso!!"))
         .catch((err) => console.log(err));
 
         if(cardAtualizado.fase >= 3) {
@@ -206,11 +204,6 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
       },
     })
       .then((resp) => resp.json())
-      .then(() => {
-        alert(
-          "Card Excluido com Sucesso"
-        );
-      })
       .catch((err) => console.log(err));
 
       fetch(`https://json-server-77b6.onrender.com${pahtSaude}/${Id}`, {
@@ -263,12 +256,11 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
           body: JSON.stringify(cardAtualizado),
         })
           .then((resp) => resp.json())
-          .then(alert("Card movido com sucesso"))
           .catch((err) => console.log(err));
 
           console.log("qual a fase: " + cardAtualizado.fase);
 
-          if(cardAtualizado.fase === 3) { cardParaSaude(c)}
+          if(cardAtualizado.fase === 3) {cardParaSaude(c)}
           else if (cardAtualizado.fase > 3) {
             var CS = {
               nome: cardAtualizado.nome,
@@ -305,7 +297,6 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
           body: JSON.stringify(cardAtualizado),
         })
           .then((resp) => resp.json())
-          .then(alert("Card movido com sucesso"))
           .catch((err) => console.log(err));
 
           if (cardAtualizado.fase > 2) {
