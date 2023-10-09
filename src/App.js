@@ -68,6 +68,7 @@ function App() {
 
   renderizarRotas()    
       
+  console.log("lindinho: " + (PrintKanBans.length));
   
   return (
     <Router>
