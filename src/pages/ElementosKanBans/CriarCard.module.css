@@ -101,3 +101,16 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
+.criarCard form .criarCardButtonSub button {
+    height: 30px;
+    width: 140px;
+    border: 2px solid rgb(199, 130, 255); 
+    background-color: white;
+    transition: all 0.2s;
+}
+
+.criarCard form .criarCardButtonSub button:hover {
+    background-color: rgb(204, 141, 255);
+    color: white;
+}

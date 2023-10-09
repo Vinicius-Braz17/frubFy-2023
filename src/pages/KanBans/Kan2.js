@@ -12,7 +12,7 @@ function Kan2({tipoKanBan, DataKanBan, BD, BDAdmissao}) {
 
     useEffect(  
         () => {
-            fetch(`http://localhost:5000${BD}`, {
+            fetch(`https://json-server-77b6.onrender.com${BD}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

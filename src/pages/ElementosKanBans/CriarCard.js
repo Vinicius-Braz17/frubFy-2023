@@ -278,7 +278,7 @@ function CriarCard({ fecharPainel, BD, Ids }) {
           </select>
         </div>
 
-        <div>
+        <div className={s.criarCardButtonSub}>
           <button>Criar Card</button>
         </div>
       </form>
