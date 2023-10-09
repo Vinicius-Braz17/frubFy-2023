@@ -53,12 +53,12 @@ function App() {
       for (let i = 0; i < BancoDados.length; i++) {
         
         RotasTemp.push(
-          <Route exact path={BancoDados[i].rota} element={
+          <Route path={BancoDados[i].rota} element={
             <Kan1 tipoKanBan='Admissão' DataKanBan={BancoDados[i].data} BD={BancoDados[i].rota} BDsaude={BancoDados[i].rotaSaude}/> 
           } />)
 
           RotasTemp.push(
-            <Route exact path={BancoDados[i].rotaSaude} element={
+            <Route path={BancoDados[i].rotaSaude} element={
               <Kan2 tipoKanBan='Saúde' DataKanBan={BancoDados[i].data} BD={BancoDados[i].rotaSaude} BDAdmissao={BancoDados[i].rota}/> 
             } />)
         
