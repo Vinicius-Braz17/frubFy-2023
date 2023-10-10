@@ -137,20 +137,6 @@
       "id": 1
     },
     {
-      "nome": "MATEHZUN",
-      "telefone": "9848",
-      "departamento": "WAREHOUSE",
-      "funcao": "WAREHOUSE ASSOCIATE III 1PL",
-      "salario": "9400",
-      "diaInicio": "Segunda-feira",
-      "diaFim": "Sexta-feira",
-      "escalaInicio": "08:59",
-      "escalaFim": "08:00",
-      "filial": "MATRIZ",
-      "fase": 4,
-      "id": 2
-    },
-    {
       "nome": "VOUISBH",
       "telefone": "984",
       "departamento": "VENDAS HUNTER",
@@ -193,21 +179,6 @@
       "filial": "SANTO ANDRE",
       "fase": 6,
       "id": 1,
-      "dataExame": ""
-    },
-    {
-      "nome": "MATEHZUN",
-      "telefone": "9848",
-      "departamento": "WAREHOUSE",
-      "funcao": "WAREHOUSE ASSOCIATE III 1PL",
-      "salario": "9400",
-      "diaInicio": "Segunda-feira",
-      "diaFim": "Sexta-feira",
-      "escalaInicio": "08:59",
-      "escalaFim": "08:00",
-      "filial": "MATRIZ",
-      "fase": 1,
-      "id": 2,
       "dataExame": ""
     },
     {
