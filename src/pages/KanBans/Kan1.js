@@ -10,9 +10,11 @@ function Kan1({tipoKanBan, DataKanBan, BD, BDsaude, BDTI}) {
     
     const [KanB, setKanB] = useState([])
 
+    let p = "https://project-data-b5es4y8cy-vinicius-projects-aeba1b40.vercel.app" + BD
+
     useEffect(
         () => {
-        fetch(`https://project-data-b5es4y8cy-vinicius-projects-aeba1b40.vercel.app${BD}`, {
+        fetch(p, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

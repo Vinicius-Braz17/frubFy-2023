@@ -110,7 +110,9 @@ function CriarCard({ fecharPainel, BD, Ids }) {
     NewCard.fase = 1;
     NewCard.id = Ids;
 
-    fetch(`https://project-data-b5es4y8cy-vinicius-projects-aeba1b40.vercel.app${BD}`, {
+    let p = "https://project-data-b5es4y8cy-vinicius-projects-aeba1b40.vercel.app" + BD
+
+    fetch(p, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
