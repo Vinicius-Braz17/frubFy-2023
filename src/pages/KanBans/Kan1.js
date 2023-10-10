@@ -12,7 +12,7 @@ function Kan1({tipoKanBan, DataKanBan, BD, BDsaude, BDTI}) {
 
     useEffect(
         () => {
-        fetch(`http://localhost:4500${BD}`, {
+        fetch(`https://project-data-b5es4y8cy-vinicius-projects-aeba1b40.vercel.app${BD}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
