@@ -11,7 +11,7 @@ function Home({ AtuRotas }) {
   const [Projetos, setProjetos] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4500/KanBans", {
+    fetch("https://project-data-omega.vercel.app/KanBans", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

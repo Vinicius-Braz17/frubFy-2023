@@ -8,7 +8,7 @@ function CriarProjeto({sair, AttRot}) {
     
     useEffect(
         () => {
-            fetch("http://localhost:4500/KanBans", {
+            fetch("https://project-data-omega.vercel.app/KanBans", {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ function CriarProjeto({sair, AttRot}) {
         }
 
 
-            fetch("http://localhost:4500/KanBans",{
+            fetch("https://project-data-omega.vercel.app/KanBans",{
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json',
