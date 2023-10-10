@@ -8,7 +8,7 @@ function CriarProjeto({sair, AttRot}) {
     
     useEffect(
         () => {
-            fetch("https://project-data-omega.vercel.app/KanBans", {
+            fetch("https://project-data-vinicius-projects-aeba1b40.vercel.app/KanBans", {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ function CriarProjeto({sair, AttRot}) {
         }
 
 
-            fetch("https://project-data-omega.vercel.app/KanBans",{
+            fetch("https://project-data-vinicius-projects-aeba1b40.vercel.app/KanBans",{
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json',
@@ -71,26 +71,7 @@ function CriarProjeto({sair, AttRot}) {
                 })
                 .catch((err) => console.log(err))
     }
-
-    // function inserirKBnoBD(obj) {
-
-    //     fetch("http://localhost:4500/",{
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-type': 'application/json',
-    //         },
-    //         body: JSON.stringify(obj),
-    //     })
-    //         .then((resp) => {
-    //             // return resp.text();
-    //             resp.json(); 
-    //         })
-    //         .then((data) => {
-    //             console.log(data)
-    //         })
-    //         .catch((err) => console.log(err))
-    // }
-
+    
     return (
             <form id={s.criarProj} onSubmit={submit}>
                 <button id={s.sairProj} onClick={sair}>X</button>

@@ -10,7 +10,7 @@ function App() {
   const [BancoDados, setBancoDados] = useState([])
     useEffect(
         () => {
-            fetch("https://project-data-omega.vercel.app/KanBans", {
+            fetch("https://project-data-vinicius-projects-aeba1b40.vercel.app/KanBans", {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
