@@ -10,7 +10,7 @@ function App() {
   const [BancoDados, setBancoDados] = useState([])
     useEffect(
         () => {
-            fetch("https://json-server-77b6.onrender.com/KanBans", {
+            fetch("http://localhost:4500/KanBans", {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

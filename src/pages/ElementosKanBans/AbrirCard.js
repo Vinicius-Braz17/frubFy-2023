@@ -2,6 +2,7 @@ import s from "./AbrirCard.module.css";
 import { useEffect, useState } from "react";
 
 function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
+  let loaded;
   const dias = [
     {
       dia: "",
@@ -45,6 +46,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
     let index = findIndex(KanB, Id);
 
     colaborador = KanB[index];
+    loaded = 1;
   }
 
   renderizar();
@@ -54,7 +56,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
   const [filiais, setFiliais] = useState([]);
 
   useEffect(() => {
-    fetch("https://json-server-77b6.onrender.com/cargos", {
+    fetch("http://localhost:4500/cargos", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -68,7 +70,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
   }, []);
 
   useEffect(() => {
-    fetch("https://json-server-77b6.onrender.com/filiais", {
+    fetch("http://localhost:4500/filiais", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -134,7 +136,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
     if (dec.checked) {
       cardAtualizado.fase = 8;
 
-      fetch(`https://json-server-77b6.onrender.com${paht}/${Id}`, {
+      fetch(`http://localhost:4500${paht}/${Id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -147,7 +149,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
         var CardDeclinioS = cardAtualizado;
         CardDeclinioS.fase = 6
 
-        fetch(`https://json-server-77b6.onrender.com${pahtSaude}/${Id}`, {
+        fetch(`http://localhost:4500${pahtSaude}/${Id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -157,7 +159,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
         .then((resp) => resp.json())
         .catch((err) => console.log(err));
     } else {
-      fetch(`https://json-server-77b6.onrender.com${paht}/${Id}`, {
+      fetch(`http://localhost:4500${paht}/${Id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -182,7 +184,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
           dataExame: ""
         }
 
-        fetch(`https://json-server-77b6.onrender.com${pahtSaude}/${Id}`, {
+        fetch(`http://localhost:4500${pahtSaude}/${Id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -197,7 +199,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
   }
 
   function removerCard() {
-    fetch(`https://json-server-77b6.onrender.com${paht}/${Id}`, {
+    fetch(`http://localhost:4500${paht}/${Id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -206,7 +208,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
       .then((resp) => resp.json())
       .catch((err) => console.log(err));
 
-      fetch(`https://json-server-77b6.onrender.com${pahtSaude}/${Id}`, {
+      fetch(`http://localhost:4500${pahtSaude}/${Id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -221,7 +223,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
     cardS.fase = 1;
     cardS.dataExame = ''
 
-    fetch(`https://json-server-77b6.onrender.com${pahtSaude}`, {
+    fetch(`http://localhost:4500${pahtSaude}`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -248,7 +250,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
       if (direcao === 1) {
         cardAtualizado.fase++;
 
-        fetch(`https://json-server-77b6.onrender.com${paht}/${Id}`, {
+        fetch(`http://localhost:4500${paht}/${Id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -258,7 +260,6 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
           .then((resp) => resp.json())
           .catch((err) => console.log(err));
 
-          console.log("qual a fase: " + cardAtualizado.fase);
 
           if(cardAtualizado.fase === 3) {cardParaSaude(c)}
           else if (cardAtualizado.fase > 3) {
@@ -276,7 +277,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
               dataExame: ""
             }
     
-            fetch(`https://json-server-77b6.onrender.com${pahtSaude}/${Id}`, {
+            fetch(`http://localhost:4500${pahtSaude}/${Id}`, {
             method: "PATCH",
             headers: {
               "Content-Type": "application/json",
@@ -289,7 +290,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
       } else {
         cardAtualizado.fase--;
 
-        fetch(`https://json-server-77b6.onrender.com${paht}/${Id}`, {
+        fetch(`http://localhost:4500${paht}/${Id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -314,7 +315,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
               dataExame: ""
             }
     
-            fetch(`https://json-server-77b6.onrender.com${pahtSaude}/${Id}`, {
+            fetch(`http://localhost:4500${pahtSaude}/${Id}`, {
             method: "PATCH",
             headers: {
               "Content-Type": "application/json",
@@ -330,7 +331,10 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
 
   return (
     <section className={s.criarCard}>
-      <h1>{nome}</h1>
+    {loaded && (
+    
+    <>
+    <h1>{nome}</h1>
       <button id={s.botaoX} onClick={fecharPainel}>
         X
       </button>
@@ -545,7 +549,11 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
           <button onClick={removerCard}>Excluir card</button>
         </div>
       </form>
-    </section>
+    </>
+      
+    )
+  }
+  </section>
   );
 }
 

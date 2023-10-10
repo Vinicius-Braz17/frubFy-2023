@@ -8,7 +8,7 @@ function CriarProjeto({sair, AttRot}) {
     
     useEffect(
         () => {
-            fetch("https://json-server-77b6.onrender.com/KanBans", {
+            fetch("http://localhost:4500/KanBans", {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ function CriarProjeto({sair, AttRot}) {
         }
 
 
-            fetch("https://json-server-77b6.onrender.com/KanBans",{
+            fetch("http://localhost:4500/KanBans",{
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json',
@@ -74,7 +74,7 @@ function CriarProjeto({sair, AttRot}) {
 
     // function inserirKBnoBD(obj) {
 
-    //     fetch("http://localhost:5000/",{
+    //     fetch("http://localhost:4500/",{
     //         method: 'POST',
     //         headers: {
     //             'Content-type': 'application/json',

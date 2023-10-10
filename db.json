@@ -1,5 +1,11 @@
 {
   "KanBans": [
+    {
+      "data": "2023-07-17",
+      "rota": "/AD1",
+      "rotaSaude": "/S1",
+      "id": 1
+    }
   ],
   "cargos": [
     {
@@ -116,8 +122,124 @@
     }
   ],
   "AD1": [
+    {
+      "departamento": "VENDAS HUNTER",
+      "nome": "VINICIUS",
+      "telefone": "1800",
+      "funcao": "SALES HUNTER ASSOCIATE",
+      "salario": "1350",
+      "diaInicio": "Segunda-feira",
+      "diaFim": "Sexta-feira",
+      "escalaInicio": "08:00",
+      "escalaFim": "08:00",
+      "filial": "SANTO ANDRE",
+      "fase": 8,
+      "id": 1
+    },
+    {
+      "nome": "MATEHZUN",
+      "telefone": "9848",
+      "departamento": "WAREHOUSE",
+      "funcao": "WAREHOUSE ASSOCIATE III 1PL",
+      "salario": "9400",
+      "diaInicio": "Segunda-feira",
+      "diaFim": "Sexta-feira",
+      "escalaInicio": "08:59",
+      "escalaFim": "08:00",
+      "filial": "MATRIZ",
+      "fase": 4,
+      "id": 2
+    },
+    {
+      "nome": "VOUISBH",
+      "telefone": "984",
+      "departamento": "VENDAS HUNTER",
+      "funcao": "SALES HUNTER ASSOCIATE",
+      "salario": "159",
+      "diaInicio": "Segunda-feira",
+      "diaFim": "Segunda-feira",
+      "escalaInicio": "08:00",
+      "escalaFim": "08:00",
+      "filial": "BELO HORIZONTE/MG",
+      "fase": 6,
+      "id": 5
+    },
+    {
+      "nome": "ISIS LOURUDAAA",
+      "telefone": "48484",
+      "departamento": "PAYROOL & HIRING",
+      "funcao": "PAYROOL & HIRING ANALYST I",
+      "salario": "5151",
+      "diaInicio": "Segunda-feira",
+      "diaFim": "Segunda-feira",
+      "escalaInicio": "08:00",
+      "escalaFim": "08:00",
+      "filial": "GUARULHOS",
+      "fase": 7,
+      "id": 9
+    }
   ],
   "S1": [
+    {
+      "departamento": "VENDAS HUNTER",
+      "nome": "VINICIUS",
+      "telefone": "1800",
+      "funcao": "SALES HUNTER ASSOCIATE",
+      "salario": "1350",
+      "diaInicio": "Segunda-feira",
+      "diaFim": "Sexta-feira",
+      "escalaInicio": "08:00",
+      "escalaFim": "08:00",
+      "filial": "SANTO ANDRE",
+      "fase": 6,
+      "id": 1,
+      "dataExame": ""
+    },
+    {
+      "nome": "MATEHZUN",
+      "telefone": "9848",
+      "departamento": "WAREHOUSE",
+      "funcao": "WAREHOUSE ASSOCIATE III 1PL",
+      "salario": "9400",
+      "diaInicio": "Segunda-feira",
+      "diaFim": "Sexta-feira",
+      "escalaInicio": "08:59",
+      "escalaFim": "08:00",
+      "filial": "MATRIZ",
+      "fase": 1,
+      "id": 2,
+      "dataExame": ""
+    },
+    {
+      "nome": "VOUISBH",
+      "telefone": "984",
+      "departamento": "VENDAS HUNTER",
+      "funcao": "SALES HUNTER ASSOCIATE",
+      "salario": "159",
+      "diaInicio": "Segunda-feira",
+      "diaFim": "Segunda-feira",
+      "escalaInicio": "08:00",
+      "escalaFim": "08:00",
+      "filial": "BELO HORIZONTE/MG",
+      "fase": 1,
+      "id": 5,
+      "dataExame": ""
+    },
+    {
+      "nome": "ISIS LOURUDAAA",
+      "telefone": "48484",
+      "departamento": "PAYROOL & HIRING",
+      "funcao": "PAYROOL & HIRING ANALYST I",
+      "salario": "5151",
+      "diaInicio": "Segunda-feira",
+      "diaFim": "Segunda-feira",
+      "escalaInicio": "08:00",
+      "escalaFim": "08:00",
+      "filial": "GUARULHOS",
+      "fase": 1,
+      "id": 9,
+      "dataExame": ""
+    }
   ],
   "AD2": [],
   "S2": [],
