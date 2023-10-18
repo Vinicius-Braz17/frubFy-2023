@@ -1,23 +1,5 @@
 {
   "KanBans": [
-    {
-      "data": "2023-10-24",
-      "rota": "/AD1",
-      "rotaSaude": "/S1",
-      "id": 1
-    },
-    {
-      "data": "2005-03-12",
-      "rota": "/AD2",
-      "rotaSaude": "/S2",
-      "id": 2
-    },
-    {
-      "data": "2002-12-25",
-      "rota": "/AD3",
-      "rotaSaude": "/S3",
-      "id": 3
-    }
   ],
   "cargos": [
     {
@@ -51,44 +33,64 @@
       "id": 5
     },
     {
-      "nome": "PAYROOL & HIRING MANAGER",
+      "nome": "PAYROOL & HIRING ANALYST II",
       "departamento": "PAYROOL & HIRING",
       "id": 6
     },
     {
-      "nome": "PAYROLL & HIRING LEADER",
+      "nome": "PAYROOL & HIRING ANALYST III",
       "departamento": "PAYROOL & HIRING",
       "id": 7
     },
     {
+      "nome": "PAYROOL & HIRING MANAGER",
+      "departamento": "PAYROOL & HIRING",
+      "id": 8
+    },
+    {
+      "nome": "PAYROLL & HIRING LEADER",
+      "departamento": "PAYROOL & HIRING",
+      "id": 9
+    },
+    {
       "nome": "SALES HUNTER ASSOCIATE",
       "departamento": "VENDAS HUNTER",
-      "id": 8
+      "id": 10
     },
     {
       "nome": "SALES FARMER ASSOCIATE",
       "departamento": "VENDAS FARMER",
-      "id": 9
+      "id": 11
     },
     {
       "nome": "SALES KAM ASSOCIATE",
       "departamento": "SALES KAM",
-      "id": 10
+      "id": 12
     },
     {
       "nome": "SALES KAM ADMIN ASSOCIATE",
       "departamento": "SALES KAM ADMIN",
-      "id": 11
+      "id": 13
     },
     {
       "nome": "SALES HRBP",
       "departamento": "HRBPs SALES",
-      "id": 12
+      "id": 14
     },
     {
       "nome": "WAREHOUSE HRBP",
       "departamento": "HRBPs OPS",
-      "id": 13
+      "id": 15
+    },
+    {
+      "nome": "PROCUREMENT ASSOCIATE I",
+      "departamento": "PROCUREMENT",
+      "id": 16
+    },
+    {
+      "nome": "PROCUREMENT ADMIN ASSOCIATE I",
+      "departamento": "PROCUREMENT",
+      "id": 17
     }
   ],
   "filiais": [
@@ -131,169 +133,19 @@
     {
       "nome": "3PL/ARFRIO",
       "id": 9
+    },
+    {
+      "nome": "3PL/TREMEBÉ",
+      "id": 10
     }
   ],
   "AD1": [
-    {
-      "nome": "VINICIUS DO PRADO",
-      "telefone": "11997540828",
-      "departamento": "PAYROOL & HIRING",
-      "funcao": "PAYROOL & HIRING MANAGER",
-      "salario": "913",
-      "diaInicio": "Segunda-feira",
-      "diaFim": "Sexta-feira",
-      "escalaInicio": "03:20",
-      "escalaFim": "18:50",
-      "filial": "GUARULHOS",
-      "fase": 3,
-      "id": 1
-    },
-    {
-      "nome": "PEWDRO VALERIO",
-      "telefone": "000000000000",
-      "departamento": "PAYROOL & HIRING",
-      "funcao": "PAYROLL & HIRING LEADER",
-      "salario": "1808",
-      "diaInicio": "Segunda-feira",
-      "diaFim": "Sexta-feira",
-      "escalaInicio": "08:00",
-      "escalaFim": "18:00",
-      "filial": "GUARULHOS",
-      "fase": 8,
-      "id": 2
-    },
-    {
-      "nome": "DADA",
-      "telefone": "51591",
-      "departamento": "VENDAS HUNTER",
-      "funcao": "SALES HUNTER ASSOCIATE",
-      "salario": "159",
-      "diaInicio": "Segunda-feira",
-      "diaFim": "Sexta-feira",
-      "escalaInicio": "08:00",
-      "escalaFim": "08:00",
-      "filial": "SANTO ANDRE",
-      "fase": 3,
-      "id": 3
-    },
-    {
-      "nome": "SAMUEL BRAZ",
-      "telefone": "191945",
-      "departamento": "PAYROOL & HIRING",
-      "funcao": "PAYROOL & HIRING APPRENDICE",
-      "salario": "1980",
-      "diaInicio": "Segunda-feira",
-      "diaFim": "Sexta-feira",
-      "escalaInicio": "08:00",
-      "escalaFim": "08:00",
-      "filial": "SANTO ANDRE",
-      "fase": 3,
-      "id": 4
-    }
   ],
   "S1": [
-    {
-      "nome": "VINICIUS DO PRADO",
-      "telefone": "11997540828",
-      "departamento": "PAYROOL & HIRING",
-      "funcao": "PAYROOL & HIRING MANAGER",
-      "salario": "913",
-      "diaInicio": "Segunda-feira",
-      "diaFim": "Sexta-feira",
-      "escalaInicio": "03:20",
-      "escalaFim": "18:50",
-      "filial": "GUARULHOS",
-      "fase": 5,
-      "id": 1,
-      "dataExame": "2032-10-17",
-      "horarioExame": "05:00",
-      "clinica": "hospital sao camilo"
-    },
-    {
-      "nome": "PEWDRO VALERIO",
-      "telefone": "000000000000",
-      "departamento": "PAYROOL & HIRING",
-      "funcao": "PAYROLL & HIRING LEADER",
-      "salario": "1808",
-      "diaInicio": "Segunda-feira",
-      "diaFim": "Sexta-feira",
-      "escalaInicio": "08:00",
-      "escalaFim": "18:00",
-      "filial": "GUARULHOS",
-      "fase": 6,
-      "id": 2,
-      "dataExame": ""
-    },
-    {
-      "nome": "DADA",
-      "telefone": "51591",
-      "departamento": "VENDAS HUNTER",
-      "funcao": "SALES HUNTER ASSOCIATE",
-      "salario": "159",
-      "diaInicio": "Segunda-feira",
-      "diaFim": "Sexta-feira",
-      "escalaInicio": "08:00",
-      "escalaFim": "08:00",
-      "filial": "SANTO ANDRE",
-      "fase": 4,
-      "id": 3,
-      "dataExame": "2023-10-05",
-      "horarioExame": "08:00",
-      "clinica": "BIOMED"
-    },
-    {
-      "nome": "SAMUEL BRAZ",
-      "telefone": "191945",
-      "departamento": "PAYROOL & HIRING",
-      "funcao": "PAYROOL & HIRING APPRENDICE",
-      "salario": "1980",
-      "diaInicio": "Segunda-feira",
-      "diaFim": "Sexta-feira",
-      "escalaInicio": "08:00",
-      "escalaFim": "08:00",
-      "filial": "SANTO ANDRE",
-      "fase": 4,
-      "id": 4,
-      "dataExame": "2023-10-16",
-      "horarioExame": "08:00",
-      "clinica": "BIOMED NAO SEU O"
-    }
   ],
   "AD2": [
-    {
-      "nome": "SIURLENE KARI DO PRADO BRAZ",
-      "telefone": "118754025",
-      "departamento": "WAREHOUSE",
-      "funcao": "WAREHOUSE ASSOCIATE III 1PL",
-      "salario": "1500",
-      "diaInicio": "Quarta-feira",
-      "diaFim": "Sábado",
-      "escalaInicio": "12:00",
-      "escalaFim": "13:00",
-      "filial": "MATRIZ",
-      "fase": 4,
-      "id": 1
-    }
   ],
-  "S2": [
-    {
-      "nome": "SIURLENE KARI DO PRADO BRAZ",
-      "telefone": "118754025",
-      "departamento": "WAREHOUSE",
-      "funcao": "WAREHOUSE ASSOCIATE III 1PL",
-      "salario": "1500",
-      "diaInicio": "Quarta-feira",
-      "diaFim": "Sábado",
-      "escalaInicio": "12:00",
-      "escalaFim": "13:00",
-      "filial": "MATRIZ",
-      "fase": 4,
-      "id": 1,
-      "dataExame": "2023-10-16",
-      "horarioExame": "09:30",
-      "clinica": "medico sus"
-    }
-  ],
+  "S2": [],
   "AD3": [],
   "S3": [],
   "AD4": [],
@@ -329,5 +181,19 @@
   "AD19": [],
   "S19": [],
   "AD20": [],
-  "S20": []
+  "S20": [],
+  "AD21": [],
+  "S21": [],
+  "AD22": [],
+  "S22": [],
+  "AD23": [],
+  "S23": [],
+  "AD24": [],
+  "S24": [],
+  "AD25": [],
+  "S25": [],
+  "AD26": [],
+  "S26": [],
+  "AD27": [],
+  "S27": []
 }
