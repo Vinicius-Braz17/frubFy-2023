@@ -1,10 +1,9 @@
 import s from './ColunaKanBan.module.css'
 
-function ColunaKanBan({nome, Cards, botao}) {    
-
+function ColunaKanBan({nome, Cards, botao, color}) {    
     return (
-        <section className={s.colKB}>
-                <p>{botao}{nome}</p>
+        <section className={s.colKB} id={color}>
+                <p className={s.NomeCol} id={color}>{botao}{nome}</p>
 
             <div id='col'>
                 {Cards}

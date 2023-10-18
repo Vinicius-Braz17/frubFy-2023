@@ -54,7 +54,7 @@ function AbrirCardSaude({ fecharPainel, BD, nome, Id, paht, pahtSaude }) {
   const [filiais, setFiliais] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/cargos", {
+    fetch("http://localhost:4500/cargos", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -68,7 +68,7 @@ function AbrirCardSaude({ fecharPainel, BD, nome, Id, paht, pahtSaude }) {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/filiais", {
+    fetch("http://localhost:4500/filiais", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -129,7 +129,7 @@ function AbrirCardSaude({ fecharPainel, BD, nome, Id, paht, pahtSaude }) {
   }
 
   function atualizarCard(cardAtualizado) {
-    fetch(`http://localhost:5000${pahtSaude}/${Id}`, {
+    fetch(`http://localhost:4500${pahtSaude}/${Id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -137,7 +137,6 @@ function AbrirCardSaude({ fecharPainel, BD, nome, Id, paht, pahtSaude }) {
       body: JSON.stringify(cardAtualizado),
     })
       .then((resp) => resp.json())
-      .then(alert("Card atualizado com sucesso!!"))
       .catch((err) => console.log(err));
 
       var CS = {
@@ -154,7 +153,7 @@ function AbrirCardSaude({ fecharPainel, BD, nome, Id, paht, pahtSaude }) {
         id: cardAtualizado.id,
       }
 
-      fetch(`http://localhost:5000${paht}/${Id}`, {
+      fetch(`http://localhost:4500${paht}/${Id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -170,7 +169,7 @@ function AbrirCardSaude({ fecharPainel, BD, nome, Id, paht, pahtSaude }) {
     if (APTO != undefined && APTO.checked) {
       cardAtualizado.fase++;
 
-      fetch(`http://localhost:5000${pahtSaude}/${Id}`, {
+      fetch(`http://localhost:4500${pahtSaude}/${Id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -195,7 +194,7 @@ function AbrirCardSaude({ fecharPainel, BD, nome, Id, paht, pahtSaude }) {
           if ((APTO != undefined && APTO.checked) || colaborador.fase < 3) {
             cardAtualizado.fase++;
 
-            fetch(`http://localhost:5000${pahtSaude}/${Id}`, {
+            fetch(`http://localhost:4500${pahtSaude}/${Id}`, {
               method: "PATCH",
               headers: {
                 "Content-Type": "application/json",
@@ -203,12 +202,11 @@ function AbrirCardSaude({ fecharPainel, BD, nome, Id, paht, pahtSaude }) {
               body: JSON.stringify(cardAtualizado),
             })
               .then((resp) => resp.json())
-              .then(alert("Card movido com sucesso"))
               .catch((err) => console.log(err));
           } else {
             cardAtualizado.fase += 2;
 
-            fetch(`http://localhost:5000${pahtSaude}/${Id}`, {
+            fetch(`http://localhost:4500${pahtSaude}/${Id}`, {
               method: "PATCH",
               headers: {
                 "Content-Type": "application/json",
@@ -216,13 +214,12 @@ function AbrirCardSaude({ fecharPainel, BD, nome, Id, paht, pahtSaude }) {
               body: JSON.stringify(cardAtualizado),
             })
               .then((resp) => resp.json())
-              .then(alert("Card movido com sucesso"))
               .catch((err) => console.log(err));
           }
         } else {
           cardAtualizado.fase--;
 
-          fetch(`http://localhost:5000${pahtSaude}/${Id}`, {
+          fetch(`http://localhost:4500${pahtSaude}/${Id}`, {
             method: "PATCH",
             headers: {
               "Content-Type": "application/json",
@@ -230,7 +227,6 @@ function AbrirCardSaude({ fecharPainel, BD, nome, Id, paht, pahtSaude }) {
             body: JSON.stringify(cardAtualizado),
           })
             .then((resp) => resp.json())
-            .then(alert("Card movido com sucesso"))
             .catch((err) => console.log(err));
         }
       }
@@ -369,6 +365,7 @@ function AbrirCardSaude({ fecharPainel, BD, nome, Id, paht, pahtSaude }) {
             type="text"
             name="clinica"
             defaultValue={colaborador.clinica}
+            autoComplete="off"
             onChange={HandleChange}
           />
         </div>

@@ -8,7 +8,7 @@ function CriarProjeto({sair, AttRot}) {
     
     useEffect(
         () => {
-            fetch("https://project-data-vinicius-projects-aeba1b40.vercel.app/KanBans", {
+            fetch("http://localhost:4500/KanBans", {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ function CriarProjeto({sair, AttRot}) {
         }
 
 
-            fetch("https://project-data-vinicius-projects-aeba1b40.vercel.app/KanBans",{
+            fetch("http://localhost:4500/KanBans",{
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json',

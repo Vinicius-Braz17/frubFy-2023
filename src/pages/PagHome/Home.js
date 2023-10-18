@@ -11,7 +11,7 @@ function Home({ AtuRotas }) {
   const [Projetos, setProjetos] = useState([]);
 
   useEffect(() => {
-    fetch("https://project-data-vinicius-projects-aeba1b40.vercel.app/KanBans", {
+    fetch("http://localhost:4500/KanBans", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -59,7 +59,7 @@ function Home({ AtuRotas }) {
 
       <div className={s.menuPainel}>
         <button onClick={AbrirCriarKB}>Novo KanBan</button>
-        <input type="text" placeholder="Pesquise seu kanban" />
+        <h2>Frub-Fy</h2>
       </div>
         
       <div className={s.PainelInterno}>{ProjetosPrintBD}</div>

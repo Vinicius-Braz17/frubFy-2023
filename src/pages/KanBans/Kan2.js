@@ -5,6 +5,8 @@ import ColunaKanBan from "../ElementosKanBans/ColunaKanBan"
 import { useEffect } from "react"
 import s from './Kan1.module.css'
 import AbrirCardSaude from "../ElementosKanBans/AbrirCardSaude"
+import e from  "../ElementosKanBans/ColunaKanBan.module.css"
+
 
 function Kan2({tipoKanBan, DataKanBan, BD, BDAdmissao}) {
 
@@ -12,7 +14,7 @@ function Kan2({tipoKanBan, DataKanBan, BD, BDAdmissao}) {
 
     useEffect(  
         () => {
-            fetch(`https://project-data-b5es4y8cy-vinicius-projects-aeba1b40.vercel.app${BD}`, {
+            fetch(`http://localhost:4500${BD}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -37,12 +39,12 @@ function Kan2({tipoKanBan, DataKanBan, BD, BDAdmissao}) {
     }
 
 
-    var coluna1 = <ColunaKanBan nome={"Cadastro e agendamento SOC"}/>;
-    var coluna2 = <ColunaKanBan nome={"Envio Guia de exame médico"}/>;
-    var coluna3 = <ColunaKanBan nome={"Realização do exame"}/>;
-    var coluna4 = <ColunaKanBan nome={"Aprovados (Aptos)"}/>;
-    var coluna5 = <ColunaKanBan nome={"Reprovados (Inaptos)"}/>;
-    var coluna6 = <ColunaKanBan nome={"Declinios"}/>;
+    var coluna1 = <ColunaKanBan color={e.colK2} nome={"Cadastro e agendamento SOC"}/>;
+    var coluna2 = <ColunaKanBan color={e.colK2} nome={"Envio Guia de exame médico"}/>;
+    var coluna3 = <ColunaKanBan color={e.colK2} nome={"Realização do exame"}/>;
+    var coluna4 = <ColunaKanBan color={e.colK2} nome={"Aprovados (Aptos)"}/>;
+    var coluna5 = <ColunaKanBan color={e.colK2} nome={"Reprovados (Inaptos)"}/>;
+    var coluna6 = <ColunaKanBan color={e.colK2} nome={"Declinios"}/>;
 
     function showKB() {
         var C = []
@@ -55,27 +57,27 @@ function Kan2({tipoKanBan, DataKanBan, BD, BDAdmissao}) {
         for (let i = 0; i < KanB.length; i++) {
             if (KanB[i].fase === 1) {
                 C.push(<Card nomeC={KanB[i].nome} funcao={KanB[i].funcao} telefone={KanB[i].telefone} filial={KanB[i].filial} abrir={() => abrirVisualizacao(KanB[i].nome, KanB[i].id)}/>)
-                coluna1 = <ColunaKanBan nome={"Cadastro e agendamento SOC"}  Cards={C}/>
+                coluna1 = <ColunaKanBan color={e.colK2} nome={"Cadastro e agendamento SOC"}  Cards={C}/>
             }  
             else if (KanB[i].fase === 2) {
                 C2.push(<Card nomeC={KanB[i].nome} funcao={KanB[i].funcao} telefone={KanB[i].telefone} filial={KanB[i].filial} abrir={() => abrirVisualizacao(KanB[i].nome, KanB[i].id)}/>)
-                coluna2 = <ColunaKanBan nome={"Envio Guia de exame médico"}  Cards={C2}/>
+                coluna2 = <ColunaKanBan color={e.colK2} nome={"Envio Guia de exame médico"}  Cards={C2}/>
             }
             else if (KanB[i].fase === 3) {
                 C3.push(<Card nomeC={KanB[i].nome} funcao={KanB[i].funcao} telefone={KanB[i].telefone} filial={KanB[i].filial} abrir={() => abrirVisualizacao(KanB[i].nome, KanB[i].id)}/>)
-                coluna3 = <ColunaKanBan nome={"Realização do exame"}  Cards={C3}/>
+                coluna3 = <ColunaKanBan color={e.colK2} nome={"Realização do exame"}  Cards={C3}/>
             }
             else if (KanB[i].fase === 4) {
                 C4.push(<Card nomeC={KanB[i].nome} funcao={KanB[i].funcao} telefone={KanB[i].telefone} filial={KanB[i].filial} abrir={() => abrirVisualizacao(KanB[i].nome, KanB[i].id)}/>)
-                coluna4 = <ColunaKanBan nome={"Aprovados (Aptos)"}  Cards={C4}/>
+                coluna4 = <ColunaKanBan color={e.colK2} nome={"Aprovados (Aptos)"}  Cards={C4}/>
             }
             else if (KanB[i].fase === 5) {
                 C5.push(<Card nomeC={KanB[i].nome} funcao={KanB[i].funcao} telefone={KanB[i].telefone} filial={KanB[i].filial} abrir={() => abrirVisualizacao(KanB[i].nome, KanB[i].id)}/>)
-                coluna5 = <ColunaKanBan nome={"Reprovados (Inaptos)"}  Cards={C5}/>
+                coluna5 = <ColunaKanBan color={e.colK2} nome={"Reprovados (Inaptos)"}  Cards={C5}/>
             }
             else if (KanB[i].fase === 6) {
                 C6.push(<Card nomeC={KanB[i].nome} funcao={KanB[i].funcao} telefone={KanB[i].telefone} filial={KanB[i].filial} abrir={() => abrirVisualizacao(KanB[i].nome, KanB[i].id)}/>)
-                coluna6 = <ColunaKanBan nome={"Declinios"}  Cards={C6}/>
+                coluna6 = <ColunaKanBan color={e.colK2} nome={"Declinios"}  Cards={C6}/>
             }
         
     }

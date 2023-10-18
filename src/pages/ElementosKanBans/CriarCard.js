@@ -41,7 +41,7 @@ function CriarCard({ fecharPainel, BD, Ids }) {
   const [filiais, setFiliais] = useState([]);
 
   useEffect(() => {
-    fetch("https://project-data-b5es4y8cy-vinicius-projects-aeba1b40.vercel.app/cargos", {
+    fetch("http://localhost:4500/cargos", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -55,7 +55,7 @@ function CriarCard({ fecharPainel, BD, Ids }) {
   }, []);
 
   useEffect(() => {
-    fetch("https://project-data-b5es4y8cy-vinicius-projects-aeba1b40.vercel.app/filiais", {
+    fetch("http://localhost:4500/filiais", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -110,7 +110,7 @@ function CriarCard({ fecharPainel, BD, Ids }) {
     NewCard.fase = 1;
     NewCard.id = Ids;
 
-    let p = "https://project-data-b5es4y8cy-vinicius-projects-aeba1b40.vercel.app" + BD
+    let p = "http://localhost:4500" + BD
 
     fetch(p, {
       method: "POST",

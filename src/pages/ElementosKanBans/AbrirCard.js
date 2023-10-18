@@ -83,6 +83,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
       .catch((err) => console.log(err));
   }, []);
 
+
   function preencherDepartamentos() {
     var opcaoSelecionada = document.querySelector("#funcao").value;
 
@@ -130,6 +131,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
     }
   }
 
+
   function atualizarCard(cardAtualizado) {
     let dec = document.querySelector("#declinio");
 
@@ -158,6 +160,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
       })
         .then((resp) => resp.json())
         .catch((err) => console.log(err));
+
     } else {
       fetch(`http://localhost:4500${paht}/${Id}`, {
         method: "PATCH",
@@ -181,7 +184,6 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
           escalaFim: cardAtualizado.escalaFim,
           filial: cardAtualizado.filial,
           id: cardAtualizado.id,
-          dataExame: ""
         }
 
         fetch(`http://localhost:4500${pahtSaude}/${Id}`, {
@@ -221,7 +223,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
   function cardParaSaude(card) {
     var cardS = card
     cardS.fase = 1;
-    cardS.dataExame = ''
+    cardS.dataExame = ""
 
     fetch(`http://localhost:4500${pahtSaude}`, {
       method: "POST",
@@ -232,9 +234,6 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
     })
       .then((resp) => {
         resp.json();
-      })
-      .then((data) => {
-        console.log(data);
       })
       .catch((err) => console.log(err));
   }
@@ -260,8 +259,7 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
           .then((resp) => resp.json())
           .catch((err) => console.log(err));
 
-
-          if(cardAtualizado.fase === 3) {cardParaSaude(c)}
+          if(cardAtualizado.fase === 3) {cardParaSaude(cardAtualizado);}
           else if (cardAtualizado.fase > 3) {
             var CS = {
               nome: cardAtualizado.nome,
@@ -274,7 +272,6 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
               escalaFim: cardAtualizado.escalaFim,
               filial: cardAtualizado.filial,
               id: cardAtualizado.id,
-              dataExame: ""
             }
     
             fetch(`http://localhost:4500${pahtSaude}/${Id}`, {
@@ -312,7 +309,6 @@ function AbrirCard({ fecharPainel, BD, nome, Id, paht, pahtSaude}) {
               escalaFim: cardAtualizado.escalaFim,
               filial: cardAtualizado.filial,
               id: cardAtualizado.id,
-              dataExame: ""
             }
     
             fetch(`http://localhost:4500${pahtSaude}/${Id}`, {
